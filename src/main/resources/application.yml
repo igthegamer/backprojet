@@ -1,0 +1,49 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 8081
+spring:
+  datasource:
+    password: Igthegamer
+    url: jdbc:mysql://localhost:3306/work?serverTimezone=UTC
+
+    username: root
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+
+
+    show-sql: true
+  mail:
+    host: localhost
+    port: 1025
+    username: hello
+    password: hello
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
