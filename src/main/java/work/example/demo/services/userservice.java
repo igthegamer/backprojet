@@ -11,6 +11,7 @@ import work.example.demo.entities.User;
 import work.example.demo.entities.token;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -28,6 +29,24 @@ public class userservice implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         return userRepo.findByEmail(email).orElseThrow(()-> new UsernameNotFoundException(String.format(USER_NOT_FOUND_MSG, email)));
     }
+
+
+    public User updateUser(String email, User user) {
+        Optional<User> existingUserOptional = userRepo.findByEmail(email);
+        if (existingUserOptional.isEmpty()) {
+            throw new IllegalStateException("User not found");
+        }
+
+        User existingUser = existingUserOptional.get();
+        existingUser.setFirstName(user.getFirstName());
+        existingUser.setLastName(user.getLastName());
+        existingUser.setAddress(user.getAddress());
+        existingUser.setPhone_number(user.getPhone_number());
+        existingUser.setWorkPlaces(user.getWorkPlaces());
+
+        return userRepo.save(existingUser);
+    }
+
     public String signUpUser(User user){
         boolean userExists = userRepo.findByEmail(user.getEmail()).isPresent();
         if (userExists){

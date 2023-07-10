@@ -9,6 +9,8 @@ import javax.mail.Address;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -34,6 +36,7 @@ public class User implements UserDetails {
     private String password;
 
     private String address;
+    private String client;
     private String phone_number;
     @Enumerated(EnumType.STRING)
     private UserRole UserRole;
@@ -43,6 +46,23 @@ public class User implements UserDetails {
     @Column(nullable = false, columnDefinition = "boolean default false")
 
     private boolean enabled = false;
+
+    @ElementCollection
+    private List<String> workPlaces;
+
+    @ElementCollection
+    private List<String> workTypes;
+
+    @OneToMany(mappedBy = "professional")
+    private List<ProjectEntity> projects;
+
+    @OneToMany(mappedBy = "sender")
+    private List<ProposalEntity> sentProposals;
+    @OneToOne
+
+    private ProfessionalEntity professional;
+
+
 
     public User(
             String firstName,
@@ -84,6 +104,9 @@ public class User implements UserDetails {
     public String getUsername() {
         return email;
     }
+    public String getClient() {
+        return client;
+    }
 
     public String getLastName() {
 
@@ -97,6 +120,9 @@ public class User implements UserDetails {
     }
     public String getPhone_number(){
         return phone_number;
+    }
+    public UserRole getRole(){
+        return UserRole;
     }
 
     @Override
@@ -118,6 +144,11 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return enabled;
     }
-
+    public String getProfessionalId() {
+        if (UserRole == UserRole.Pro) {
+            return id.toString(); // Assuming the ID is of type Long
+        }
+        return null; // Return null if the user is not a professional
+    }
 
 }

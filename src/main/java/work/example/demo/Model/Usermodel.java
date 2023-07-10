@@ -1,56 +1,54 @@
 package work.example.demo.Model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import work.example.demo.entities.ProfessionalEntity;
 import work.example.demo.entities.User;
-import work.example.demo.entities.UserRole;
 
-import javax.persistence.Column;
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Builder
-@Getter
-@Setter
 public class Usermodel {
+    private String id;
+    private String password;
+    private String email;
+    private String firstName;
+    private String lastName;
+    private boolean enabled;
+    private String client;
+    private ProfessionalEntity professional;
 
-private String id;
-private String password;
-private String email;
-private String firstName;
-private String lastName;
-    @Column(nullable = false, columnDefinition = "boolean default false")
-
-private Boolean enabled = false;
-private String address;
-private UserRole UserRole;
-    @Column(nullable = false, columnDefinition = "boolean default false")
-
-private Boolean locked=false;
-
-    public static User toEntity(User user) {
-        return User.builder().id(user.getId()).firstName(user.getFirstName()).lastName(user.getLastName()).
-                email(user.getEmail())
+    public static User toEntity(Usermodel user) {
+        return User.builder()
+                .id(Long.valueOf(user.getId()))
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
                 .password(user.getPassword())
                 .enabled(user.isEnabled())
-                .address(user.getAddress())
-                .locked(user.isAccountNonLocked())
-                .UserRole(user.getUserRole())
+                .client(user.getClient()) // Convert the client to User entity
+                .professional(user.getProfessional())
                 .build();
     }
-    public static User toModel(User user) {
-        if(user==null)
+
+    public static Usermodel toModel(User user) {
+        if (user == null) {
             return null;
-        return User.builder().id(user.getId()).firstName(user.getFirstName()).lastName(user.getLastName()).
-                email(user.getEmail())
+        }
+        return Usermodel.builder()
+                .id(user.getId().toString())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
                 .password(user.getPassword())
-                .address(user.getAddress())
-                .phone_number(user.getPhone_number())
                 .enabled(user.isEnabled())
-                .locked(user.isAccountNonLocked())
-                .UserRole(user.getUserRole())
+                .client(user.getClient())// Convert the client to Usermodel
+                .professional(user.getProfessional())
                 .build();
     }
-
-
 }
+
 

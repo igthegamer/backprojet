@@ -4,6 +4,8 @@ server:
     include-binding-errors: always
   port: 8081
 spring:
+  thymeleaf:
+    enabled: true
   datasource:
     password: Igthegamer
     url: jdbc:mysql://localhost:3306/work?serverTimezone=UTC
@@ -47,3 +49,5 @@ security:
 management:
   security:
     enabled: false
+
+

@@ -22,7 +22,7 @@ import work.example.demo.services.userservice;
 @AllArgsConstructor
 @EnableWebSecurity
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/v1/registration/**")
+@RequestMapping("/api/v1/**")
 
 
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -35,9 +35,12 @@ protected void configure(HttpSecurity http) throws Exception{
     http.csrf().disable()
             .authorizeRequests()
             .antMatchers("/api/v1/registration/**").permitAll()
+             .antMatchers("/api/v1/**").permitAll()
+            .antMatchers(HttpMethod.PUT, "api/v1/**").authenticated()
 //            .anyRequest()
-//            .authenticated().and()
-            .and().httpBasic();
+//            .authenticated()
+            .and()
+            .formLogin().loginPage("/api/v1/login");
           ;
 }
 
@@ -59,7 +62,7 @@ protected void configure(HttpSecurity http) throws Exception{
         @Override
         public void addCorsMappings(CorsRegistry registry) {
             registry.addMapping("/api/v1/**")
-                    .allowedOrigins("http://localhost:4200") // Replace with the URL of your Angular app
+                    .allowedOrigins("http://localhost:4200")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("*")
                     .allowCredentials(true);
