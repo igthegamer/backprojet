@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import work.example.demo.entities.ProfessionalEntity;
 import work.example.demo.entities.User;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -17,9 +19,11 @@ public class Usermodel {
     private String email;
     private String firstName;
     private String lastName;
+    private String phone_number;
     private boolean enabled;
-    private String client;
     private ProfessionalEntity professional;
+    private List<Project> projects;
+    private List<Proposal> receivedProposals;
 
     public static User toEntity(Usermodel user) {
         return User.builder()
@@ -29,7 +33,10 @@ public class Usermodel {
                 .email(user.getEmail())
                 .password(user.getPassword())
                 .enabled(user.isEnabled())
-                .client(user.getClient()) // Convert the client to User entity
+                .phone_number(user.getPhone_number())
+                .projects(Project.convertProjectListToProjectEntityList(user.getProjects()))
+                .receivedProposals(Proposal.convertProposalListToProposalEntityList(user.getReceivedProposals()))
+
                 .professional(user.getProfessional())
                 .build();
     }
@@ -44,8 +51,8 @@ public class Usermodel {
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .password(user.getPassword())
+                .phone_number(user.getPhone_number())
                 .enabled(user.isEnabled())
-                .client(user.getClient())// Convert the client to Usermodel
                 .professional(user.getProfessional())
                 .build();
     }

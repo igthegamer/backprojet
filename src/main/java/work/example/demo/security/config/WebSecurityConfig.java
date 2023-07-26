@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import work.example.demo.services.userservice;
+import work.example.demo.services.imp.userservice;
 
 
 @Configuration
@@ -36,7 +36,10 @@ protected void configure(HttpSecurity http) throws Exception{
             .authorizeRequests()
             .antMatchers("/api/v1/registration/**").permitAll()
              .antMatchers("/api/v1/**").permitAll()
-            .antMatchers(HttpMethod.PUT, "api/v1/**").authenticated()
+            .antMatchers(HttpMethod.PUT, "/api/v1/**").permitAll()
+            .antMatchers(HttpMethod.GET, "api/v1/**").permitAll()
+            .antMatchers(HttpMethod.PUT,"/api/v1/professionals/**").permitAll()
+//
 //            .anyRequest()
 //            .authenticated()
             .and()

@@ -3,24 +3,20 @@ import io.jsonwebtoken.security.Keys;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import work.example.demo.Repository.UserRepo;
 import work.example.demo.entities.User;
-import work.example.demo.services.registrationService;
+import work.example.demo.services.imp.registrationService;
 import work.example.demo.entities.RegistrationRequest;
-import work.example.demo.services.userservice;
+import work.example.demo.services.imp.userservice;
 
 import java.security.Key;
 import java.util.*;

@@ -1,11 +1,9 @@
 package work.example.demo.entities;
-import jdk.jshell.Snippet;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.mail.Address;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
@@ -36,6 +34,7 @@ public class User implements UserDetails {
     private String password;
 
     private String address;
+
     private String client;
     private String phone_number;
     @Enumerated(EnumType.STRING)
@@ -61,6 +60,8 @@ public class User implements UserDetails {
     @OneToOne
 
     private ProfessionalEntity professional;
+    @OneToMany
+    private List<ProposalEntity> receivedProposals;
 
 
 
@@ -146,9 +147,9 @@ public class User implements UserDetails {
     }
     public String getProfessionalId() {
         if (UserRole == UserRole.Pro) {
-            return id.toString(); // Assuming the ID is of type Long
+            return id.toString();
         }
-        return null; // Return null if the user is not a professional
+        return null;
     }
 
 }

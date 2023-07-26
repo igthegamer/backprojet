@@ -20,7 +20,7 @@ public class RegistrationRequest {
     private final String email;
     private final String password;
     private final String address;
-    private final String PhoneNumber;
+    private final String phone_number;
     private final String role;
 
 
