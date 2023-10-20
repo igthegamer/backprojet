@@ -41,6 +41,8 @@ public class registrationService {
             ProfessionalEntity professionalEntity = ProfessionalEntity.builder()
                     .firstName(request.getFirstName())
                     .lastName(request.getLastName())
+                    .phone_number(request.getPhone_number())
+                    .email(request.getEmail())
                     .build();
 
             professionalRepository.save(professionalEntity);

@@ -6,6 +6,7 @@ import work.example.demo.entities.User;
 import work.example.demo.Model.Professional;
 import work.example.demo.Repository.ProfessionalRepository;
 import work.example.demo.Repository.UserRepo;
+import work.example.demo.handler.RessourceNotFoundException;
 import work.example.demo.services.ProfessionalService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -52,7 +53,11 @@ public class ProfessionalServiceImpl implements ProfessionalService {
             return ResponseEntity.ok().body(Professional.toModel(savedProfessionalEntity));
         }
     }
-
+    @Override
+    public void deleteProject(Number id) {
+        professionalRepository.findById((Long) id);
+        professionalRepository.deleteById((Long) id);
+    }
     @Override
     public Professional updateProfessional(Professional professional) {
         String decryptedId = decryptId(professional.getId()); // Perform decryption or hashing to get the actual ID value
@@ -65,7 +70,7 @@ public class ProfessionalServiceImpl implements ProfessionalService {
         existingProfessional.setFirstName(professional.getFirstName());
         existingProfessional.setLastName(professional.getLastName());
         existingProfessional.setPhone_number(professional.getPhone_number());
-        existingProfessional.setPhone_number(professional.getEmail());
+        existingProfessional.setEmail(professional.getEmail());
         existingProfessional.setWorkPlaces(professional.getWorkPlaces());
         existingProfessional.setWorkTypes(professional.getWorkTypes());
 

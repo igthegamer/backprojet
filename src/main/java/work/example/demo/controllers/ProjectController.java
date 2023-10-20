@@ -19,6 +19,7 @@ import work.example.demo.services.ProjectService;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -43,7 +44,16 @@ public class ProjectController {
 
         return projectService.creerProject(project);
     }
+    @GetMapping("/search")
+    public ResponseEntity<List<ProjectEntity>> searchProjects(@RequestParam String keyword) {
+        List<ProjectEntity> projects = new ArrayList<>();
 
+        projects.addAll(projectRepository.searchByTitle(keyword));
+        projects.addAll(projectRepository.searchByDescription(keyword));
+
+
+        return ResponseEntity.ok(projects);
+    }
     @GetMapping("/Imgproject/{id}")
     public byte[] getPhoto(@PathVariable("id") String id) throws Exception{
         ProjectEntity project   = projectRepository.findById(id).get();

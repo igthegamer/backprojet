@@ -39,6 +39,8 @@ public class User implements UserDetails {
     private String phone_number;
     @Enumerated(EnumType.STRING)
     private UserRole UserRole;
+    private boolean firstLogin; // New field
+
     @Column(nullable = false, columnDefinition = "boolean default false")
 
     private boolean locked = false ;
@@ -125,7 +127,9 @@ public class User implements UserDetails {
     public UserRole getRole(){
         return UserRole;
     }
-
+public Boolean setFirstLogin(){
+        return firstLogin;
+}
     @Override
     public boolean isAccountNonExpired() {
         return true;

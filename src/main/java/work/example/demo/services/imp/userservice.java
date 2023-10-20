@@ -29,6 +29,15 @@ public class userservice implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         return userRepo.findByEmail(email).orElseThrow(()-> new UsernameNotFoundException(String.format(USER_NOT_FOUND_MSG, email)));
     }
+    public void updateFirstLogin(String email) {
+        Optional<User> optionalUser = userRepo.findByEmail(email);
+
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            user.setFirstLogin(false);
+            userRepo.save(user);
+        }
+    }
 
 
     public User updateUser(String email, User user) {

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5bf816e4-aef0-4643-ad24-d4808ae2e6e7" name="Changes" comment="iheb" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="TypeScript File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/work/example/demo/controllers/Usercontroller.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2RYQGmjVJ8E8urOFYMn9julQm5e" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;iheb&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/work internship/demo (2)/demo&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fe01ce2a7fbac8fafaed7c982a04e229&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\IntelliJ IDEA 2022.2.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="work.example.demo.services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work internship\demo (2)\demo\src\main\java\work\example\demo\controllers" />
+      <recent name="D:\work internship\demo (2)\demo\src\main\java\work\example\demo" />
+      <recent name="D:\work internship\demo (2)\demo\src\main\java\work\example\demo\Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work internship\demo (2)\demo\src\main\java\work\example\demo" />
+      <recent name="D:\work internship\demo (2)\demo\src\main\resources\templates\emails" />
+      <recent name="D:\work internship\demo (2)\demo\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="work.example.demo.controllers" />
+      <recent name="work.example.demo.entities" />
+      <recent name="work.example.demo.Model" />
+      <recent name="work.example.demo.Repository" />
+      <recent name="work.example.demo.services.imp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DemoApplication">
+    <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="work.example.demo.DemoApplication" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="work.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="work.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DemoApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bf816e4-aef0-4643-ad24-d4808ae2e6e7" name="Changes" comment="" />
+      <created>1687424446052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687424446052</updated>
+      <workItem from="1687424447646" duration="19490000" />
+      <workItem from="1687507694392" duration="5907000" />
+      <workItem from="1687515942861" duration="8377000" />
+      <workItem from="1687544904362" duration="4179000" />
+      <workItem from="1687552639070" duration="4487000" />
+      <workItem from="1687565653995" duration="2513000" />
+      <workItem from="1687569362135" duration="76000" />
+      <workItem from="1687599743332" duration="3566000" />
+      <workItem from="1687609198078" duration="4167000" />
+      <workItem from="1687634957737" duration="11407000" />
+      <workItem from="1687689053963" duration="722000" />
+      <workItem from="1687705634863" duration="373000" />
+      <workItem from="1687710570299" duration="5739000" />
+      <workItem from="1687716600110" duration="8268000" />
+      <workItem from="1687728625417" duration="943000" />
+      <workItem from="1687775737159" duration="13330000" />
+      <workItem from="1687819169168" duration="573000" />
+      <workItem from="1687867540662" duration="338000" />
+      <workItem from="1687868149879" duration="409000" />
+      <workItem from="1687876704946" duration="2612000" />
+      <workItem from="1687964439483" duration="7771000" />
+      <workItem from="1688036617575" duration="2557000" />
+      <workItem from="1688050331461" duration="521000" />
+      <workItem from="1688053321625" duration="1396000" />
+      <workItem from="1688057354708" duration="969000" />
+      <workItem from="1688061700695" duration="22000" />
+      <workItem from="1688063036337" duration="1314000" />
+      <workItem from="1688072165420" duration="868000" />
+      <workItem from="1688137536560" duration="2947000" />
+      <workItem from="1688154177542" duration="3856000" />
+      <workItem from="1688317123630" duration="3086000" />
+      <workItem from="1688456832139" duration="11160000" />
+      <workItem from="1688498310903" duration="663000" />
+      <workItem from="1688544182822" duration="323000" />
+      <workItem from="1688547483756" duration="2285000" />
+      <workItem from="1688573818250" duration="680000" />
+      <workItem from="1688586322337" duration="725000" />
+      <workItem from="1688627371159" duration="936000" />
+      <workItem from="1688718324696" duration="13876000" />
+      <workItem from="1688830598766" duration="4027000" />
+      <workItem from="1688837581013" duration="1938000" />
+      <workItem from="1688858099135" duration="1921000" />
+      <workItem from="1688925813101" duration="1853000" />
+      <workItem from="1688928394523" duration="8341000" />
+      <workItem from="1688980568207" duration="20494000" />
+      <workItem from="1689033166643" duration="644000" />
+      <workItem from="1689063223167" duration="2706000" />
+      <workItem from="1689097518674" duration="965000" />
+      <workItem from="1689102137719" duration="1232000" />
+      <workItem from="1689147821216" duration="13083000" />
+      <workItem from="1689237339923" duration="450000" />
+      <workItem from="1689249341804" duration="6329000" />
+      <workItem from="1689339943953" duration="262000" />
+      <workItem from="1689343263921" duration="1320000" />
+      <workItem from="1689377135520" duration="656000" />
+      <workItem from="1689420187178" duration="1172000" />
+      <workItem from="1689551648318" duration="485000" />
+      <workItem from="1689581587321" duration="3539000" />
+      <workItem from="1689596998519" duration="2277000" />
+      <workItem from="1689602765666" duration="1273000" />
+      <workItem from="1689673029027" duration="1627000" />
+      <workItem from="1689680801288" duration="922000" />
+      <workItem from="1689688907984" duration="1305000" />
+      <workItem from="1689696439639" duration="297000" />
+      <workItem from="1689697240494" duration="4268000" />
+      <workItem from="1689780534530" duration="3360000" />
+      <workItem from="1689800546408" duration="2092000" />
+      <workItem from="1689805104121" duration="1785000" />
+      <workItem from="1689842388134" duration="9145000" />
+      <workItem from="1689927324760" duration="13869000" />
+      <workItem from="1690030293626" duration="691000" />
+      <workItem from="1690034341254" duration="710000" />
+      <workItem from="1690117423723" duration="871000" />
+      <workItem from="1690159418342" duration="2924000" />
+      <workItem from="1690195894509" duration="1668000" />
+      <workItem from="1690240198865" duration="29000" />
+      <workItem from="1690240979062" duration="1875000" />
+      <workItem from="1690290604120" duration="1374000" />
+      <workItem from="1690293408480" duration="615000" />
+      <workItem from="1690324083007" duration="687000" />
+      <workItem from="1690361676003" duration="4060000" />
+      <workItem from="1690375572940" duration="5699000" />
+      <workItem from="1690576266807" duration="831000" />
+      <workItem from="1690637373278" duration="1112000" />
+      <workItem from="1690974826918" duration="1245000" />
+      <workItem from="1691010131731" duration="1917000" />
+      <workItem from="1691021379197" duration="1237000" />
+      <workItem from="1691065276672" duration="1324000" />
+      <workItem from="1691232739064" duration="5030000" />
+      <workItem from="1691272864623" duration="886000" />
+      <workItem from="1691341784391" duration="2862000" />
+      <workItem from="1691403816652" duration="5712000" />
+      <workItem from="1697647069761" duration="3020000" />
+    </task>
+    <task id="LOCAL-00001" summary="iheb">
+      <created>1689000629155</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689000629155</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="iheb" />
+    <option name="LAST_COMMIT_MESSAGE" value="iheb" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/work/example/demo/DemoApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

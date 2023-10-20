@@ -42,7 +42,7 @@ public class Usercontroller {
     public ResponseEntity<Object> confirm(@RequestParam("token") String token) {
         String result = registrationservice.confirmToken(token);
         if (result.equals("confirmed")) {
-            String loginPageUrl = "http://localhost:4200/login"; // Update with your actual login page URL
+            String loginPageUrl = "http://localhost:4200/login";
             return ResponseEntity.status(HttpStatus.FOUND)
                     .header(HttpHeaders.LOCATION, loginPageUrl)
                     .build();
@@ -58,7 +58,7 @@ public class Usercontroller {
         if (workPlaces != null) {
             user.setWorkPlaces(workPlaces);
         }
-        User updatedUser = Userservice.updateUser(email,user); // Use the injected Userservice
+        User updatedUser = Userservice.updateUser(email,user);
         return ResponseEntity.ok(updatedUser);
     }
 
@@ -72,6 +72,7 @@ public class Usercontroller {
         String password = loginRequest.getPassword();
 
         Optional<User> optionalUser = repo.findByEmail(email);
+
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
 
@@ -80,7 +81,7 @@ public class Usercontroller {
             }
 
             if (passwordEncoder.matches(password, user.getPassword())) {
-                String userRole = user.getRole().name(); // Convert the UserRole enum to a string
+                String userRole = user.getRole().name();
 
                 String redirectUrl = userRole.equals("Client") ? "/client" : "/pro";
 
@@ -90,7 +91,15 @@ public class Usercontroller {
                 responseBody.put("token", jwtToken);
                 responseBody.put("redirectUrl", redirectUrl);
                 responseBody.put("role", userRole);
-                responseBody.put("user", user); // Add the user data to the response
+
+                if (userRole.equals("Pro") && user.isFirstLogin()) {
+                    user.setFirstLogin(false);
+                    repo.save(user);
+
+                    responseBody.put("firstLogin", true);
+                } else {
+                    responseBody.put("firstLogin", false);
+                }
 
                 return ResponseEntity.ok().body(responseBody);
             } else {
@@ -100,6 +109,7 @@ public class Usercontroller {
             return ResponseEntity.badRequest().body("User not found");
         }
     }
+
 
     public String generateJwtToken(String userEmail, String userRole) {
         Date expiration = new Date(System.currentTimeMillis() + 3600000);

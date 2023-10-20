@@ -13,4 +13,6 @@ public interface ProfessionalService {
     Professional updateProfessional(Professional professional);
     List<Professional> getAllProfessionals();
     Professional getUserById(String id);
+    void deleteProject(Number id);
+
 }

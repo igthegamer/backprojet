@@ -12,6 +12,11 @@ import java.util.Optional;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<ProjectEntity, String> {
+    @Query("SELECT p FROM ProjectEntity p WHERE p.title LIKE %?1%")
+    List<ProjectEntity> searchByTitle(String keyword);
+
+    @Query("SELECT p FROM ProjectEntity p WHERE p.description LIKE %?1%")
+    List<ProjectEntity> searchByDescription(String keyword);
    @Query("select p from ProjectEntity p  where p.client= ?1 ")
    List<ProjectEntity> findByClient(User client);
     @Query("select p from ProjectEntity p  where p.id= ?1 ")
